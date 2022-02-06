@@ -1,0 +1,23 @@
+{
+  "name": "learnwebsockets",
+  "version": "1.0.0",
+  "description": "This is where I learn web sockets",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iswarmondal/LearnWebSockets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iswarmondal/LearnWebSockets/issues"
+  },
+  "homepage": "https://github.com/iswarmondal/LearnWebSockets#readme",
+  "dependencies": {
+    "ws": "^8.4.2"
+  }
+}
