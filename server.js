@@ -11,10 +11,14 @@ console.log(`Web sockets are running on port ${PORT}`)
 wss.on("connection", ws => {
   console.log("New client connected")
 
-  ws.on("message", data=>{
-    console.log(`Client has sent ${data}`);
+  ws.on("message", (data, isBinary) =>{
+    wss.clients.forEach(client => {
+      if(client.readyState === Websocket.OPEN){
+        client.send(data, {binary: isBinary})
+      }
+    });
 
-    ws.send(`Here is your ${data}`)
+    // ws.send(`Here is your ${data}`)
   })
 
   ws.on("close", () => console.log("Client disconnected"))
